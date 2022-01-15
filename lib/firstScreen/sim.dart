@@ -13,30 +13,21 @@ Future<Map<String, dynamic>> getSimInfo() async {
   List<List<String>> sims = [];
   await intializeDatabase();
 
-  if (Platform.isIOS) {
-    String? nomsim;
-    SimData simData = await SimDataPlugin.getSimData();
-    for (var s in simData.cards) {
-      // print('Serial number: ${s.serialNumber}');
-      String nomsim = s.carrierName;
-
-    }
-    // String nomsim = await SimInfo.getCarrierName;
-    String id = await getIdComp(nomsim.toLowerCase());
-    sims.add([nomsim, id]);
-    return {'sims': sims, 'per': true};
-  }
-  if (Platform.isAndroid) {
+ 
     PermissionStatus state = await Permission.phone.status;
     if (!state.isGranted) {
       bool isGranted = await Permission.phone.request().isGranted;
       if (!isGranted) return {'sims': sims, 'per': false};
     }
 
-    List<SimCard>? simCards = await MobileNumber.getSimCards;
+    
+
     String nom = '';
-    for (int i = 0; i < simCards!.length; i++) {
-      nom = simCards[i].carrierName!.toLowerCase();
+    SimData simData = await SimDataPlugin.getSimData();
+    var simCards = simData.cards;
+
+    for (int i = 0; i < simCards.length; i++) {
+      nom = simCards[i].carrierName.toLowerCase();
 
       String id = await getIdComp(
           nom == "T-Mobile" || nom == "Android" ? "mattel" : nom);
@@ -55,6 +46,6 @@ Future<Map<String, dynamic>> getSimInfo() async {
       }
     }
     return {'sims': sims, 'per': true};
-  }
-  return {};
+  
+
 }

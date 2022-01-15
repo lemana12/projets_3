@@ -20,16 +20,25 @@ Future<void> intializeDatabase() async {
   }
 }
 
+
+
 Future<String> getIdComp(String nomComp) async {
-  nomComp = nomComp;
+
   dynamic d = '';
-  try {
-    dynamic value = await company.where("nom", isEqualTo: nomComp).get();
-    d = value.docs.first.id;
+ // try {
+    DocumentSnapshot value = await company.doc("40a84801dd3b45158cc2").get();
+
+   print("*********************** ----------------------- ********************");
+    print(value);
+    print("*********************** ----------------------- ********************");
+      
+    d = value.id;
+    
     print("laal $d");
-  } catch (e) {
-    print(e);
-  }
+  //} catch (e) {
+   // print("*********************** ----------------------- ********************");
+   // print(e);
+  //}
   return d.toString();
 }
 

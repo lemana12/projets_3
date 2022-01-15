@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "224464615178",
+    "firebase_url": "https://projet-s2-iscae-default-rtdb.firebaseio.com",
+    "project_id": "projet-s2-iscae",
+    "storage_bucket": "projet-s2-iscae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224464615178:android:6710eb119d8d258dbeacf3",
+        "android_client_info": {
+          "package_name": "com.example.projets_3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224464615178-7d839ksomqa1bqh4r14mhaus8n0sc1h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5qGtUD2PpQ98LDu88lxKuVmk65q7kWCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224464615178-7d839ksomqa1bqh4r14mhaus8n0sc1h8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224464615178:android:6fdf3743957b95f8beacf3",
+        "android_client_info": {
+          "package_name": "com.iscaem1.projet_s2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224464615178-7d839ksomqa1bqh4r14mhaus8n0sc1h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5qGtUD2PpQ98LDu88lxKuVmk65q7kWCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224464615178-7d839ksomqa1bqh4r14mhaus8n0sc1h8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
